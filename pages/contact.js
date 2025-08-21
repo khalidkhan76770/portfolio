@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
-import Head from "next/head";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import SEO from "../components/SEO";
 
 export default function Contact() {
   const router = useRouter();
@@ -43,9 +43,7 @@ export default function Contact() {
 
   return (
     <Layout>
-      <Head>
-        <title>Contact | Khalid Khan</title>
-      </Head>
+      <SEO title="Contact | Khalid Khan" description="Get in touch with Khalid Khan for collaborations and opportunities." />
       <h2 className="text-2xl font-bold mb-4">Contact</h2>
       <p className="text-gray-700 dark:text-gray-300 mb-2">
         Patna, India · +91 7903883874

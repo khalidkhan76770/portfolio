@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
-import Head from "next/head";
 import { useEffect, useState } from "react";
+import SEO from "../components/SEO";
 
 const titles = [
   "Front-End Developer",
@@ -21,13 +21,10 @@ export default function Home() {
 
   return (
     <Layout>
-      <Head>
-        <title>Khalid Khan | Portfolio</title>
-        <meta
-          name="description"
-          content="Portfolio of Khalid Khan - front-end developer, systems engineer, and inventory controller based in India."
-        />
-      </Head>
+      <SEO
+        title="Khalid Khan | Portfolio"
+        description="Portfolio of Khalid Khan - front-end developer, systems engineer, and inventory controller based in India."
+      />
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-gray-700 dark:to-gray-800 rounded-xl shadow">
         <img
           src="https://avatars.githubusercontent.com/u/106541625?v=4"
@@ -86,6 +83,51 @@ export default function Home() {
               <path d="M20.447 20.452H17.4V14.98c0-1.305-.026-2.986-1.819-2.986-1.82 0-2.098 1.42-2.098 2.885v5.573H10.436V9h2.924v1.561h.041c.406-.77 1.399-1.584 2.881-1.584 3.079 0 3.648 2.028 3.648 4.662v6.813zM5.337 7.433a1.7 1.7 0 1 1 0-3.402 1.7 1.7 0 0 1 0 3.402zM6.848 20.452H3.825V9h3.023v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
             </svg>
           </a>
+        </div>
+        <div className="mt-8">
+          <button
+            type="button"
+            className="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#demoModal"
+          >
+            Launch Demo Modal
+          </button>
+        </div>
+        <div
+          className="modal fade"
+          id="demoModal"
+          tabIndex="-1"
+          aria-labelledby="demoModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="demoModalLabel">
+                  Welcome
+                </h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="modal-body">
+                This is a sample Bootstrap modal.
+              </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>

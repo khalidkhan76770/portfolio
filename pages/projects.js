@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import ProjectCard from "../components/ProjectCard";
-import Head from "next/head";
+import SEO from "../components/SEO";
 
 const projects = [
   {
@@ -62,9 +62,7 @@ const projects = [
 export default function Projects() {
   return (
     <Layout>
-      <Head>
-        <title>Projects | Khalid Khan</title>
-      </Head>
+      <SEO title="Projects | Khalid Khan" description="A selection of web development projects by Khalid Khan." />
       <section className="space-y-6">
         <h2 className="text-3xl font-bold">Projects</h2>
         <div className="grid md:grid-cols-2 gap-6">

@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import Head from "next/head";
+import SEO from "../components/SEO";
 
 const skills = [
   "HTML & CSS",
@@ -51,9 +51,7 @@ const certificates = [
 export default function About() {
   return (
     <Layout>
-      <Head>
-        <title>About | Khalid Khan</title>
-      </Head>
+      <SEO title="About | Khalid Khan" description="Learn more about Khalid Khan's skills and experience." />
       <section className="bg-white/70 dark:bg-gray-800/70 backdrop-blur rounded-xl p-6 shadow space-y-6">
         <h2 className="text-3xl font-bold">About Me</h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
