@@ -4,6 +4,7 @@ export default function ProjectCard({ title, description, image, link, github, t
       <img
         src={image}
         alt={title}
+        loading="lazy"
         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
       />
       <div className="p-4 flex flex-col flex-1">
