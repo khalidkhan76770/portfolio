@@ -1,7 +1,9 @@
 import Layout from "../components/Layout";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Contact() {
+  const router = useRouter();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState(null);
 
@@ -17,7 +19,7 @@ export default function Contact() {
     }
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(`${router.basePath}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
