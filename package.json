@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
-    "export": "next build && next export -o docs"
+    "export": "next build && rm -rf docs && mv out docs"
   },
   "dependencies": {
     "next": "^14.0.0",
