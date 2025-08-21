@@ -19,7 +19,7 @@ export default function Footer() {
           </svg>
         </a>
         <a
-          href="https://www.linkedin.com/in/khalid"
+          href="https://www.linkedin.com/in/khalidkhan76770"
           aria-label="LinkedIn"
           className="hover:text-blue-600"
           target="_blank"

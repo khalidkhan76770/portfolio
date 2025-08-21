@@ -84,8 +84,8 @@ export default function Header() {
       <div className="max-w-4xl mx-auto flex justify-between items-center px-6 py-4">
         <Link href="/" className="flex items-center space-x-2">
           <img
-            src="https://via.placeholder.com/32"
-            alt="Logo"
+            src="https://avatars.githubusercontent.com/u/106541625?v=4"
+            alt="Khalid Khan logo"
             className="h-8 w-8 rounded-full"
           />
           <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">

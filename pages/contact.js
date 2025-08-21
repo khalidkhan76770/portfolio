@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import Head from "next/head";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
@@ -42,9 +43,21 @@ export default function Contact() {
 
   return (
     <Layout>
+      <Head>
+        <title>Contact | Khalid Khan</title>
+      </Head>
       <h2 className="text-2xl font-bold mb-4">Contact</h2>
+      <p className="text-gray-700 dark:text-gray-300 mb-2">
+        Patna, India · +91 7903883874
+      </p>
       <p className="text-gray-700 dark:text-gray-300 mb-6">
-        Interested in working together? Fill out the form below or send me an email.
+        Interested in working together? Fill out the form below or send me an email at{' '}
+        <a
+          href="mailto:khalid.khan.76770@gmail.com"
+          className="text-blue-600 hover:underline"
+        >
+          khalid.khan.76770@gmail.com
+        </a>
       </p>
       <form className="grid gap-4 max-w-md" onSubmit={handleSubmit} noValidate>
         <div className="hidden">
