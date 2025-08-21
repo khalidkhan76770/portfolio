@@ -20,31 +20,31 @@ export default function Home() {
 
   return (
     <Layout>
-      <section className="text-center py-20 bg-gradient-to-br from-blue-50 to-purple-100 rounded-xl shadow">
+      <section className="text-center py-20 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-gray-700 dark:to-gray-800 rounded-xl shadow">
         <img
           src="https://via.placeholder.com/128"
           alt="Profile"
           className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
         />
         <h2 className="text-4xl font-extrabold mb-3">Hello, I'm Khalid Khan</h2>
-        <p className="mb-8 text-gray-700 text-lg">
+        <p className="mb-8 text-gray-700 dark:text-gray-300 text-lg">
           I'm a <span className="text-blue-600">{titles[current]}</span>
         </p>
         <div className="flex justify-center gap-4 mb-8">
           <Link
             href="/projects"
-            className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700"
+            className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
           >
             View Projects
           </Link>
           <Link
             href="/contact"
-            className="px-6 py-3 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50"
+            className="px-6 py-3 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 dark:hover:bg-gray-700"
           >
             Contact Me
           </Link>
         </div>
-        <div className="flex justify-center gap-6 text-gray-600">
+        <div className="flex justify-center gap-6 text-gray-600 dark:text-gray-300">
           <a
             href="https://github.com/khalidkhan76770"
             aria-label="GitHub"

@@ -6,12 +6,13 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
 
-  const { name, email, message } = req.body || {};
+  const { name, email, message, nickname } = req.body || {};
 
   if (
     typeof name !== 'string' ||
     typeof email !== 'string' ||
     typeof message !== 'string' ||
+    (nickname && nickname.trim() !== '') ||
     !name.trim() ||
     !message.trim() ||
     !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
