@@ -44,20 +44,21 @@ export default function Contact() {
   return (
     <Layout>
       <SEO title="Contact | Khalid Khan" description="Get in touch with Khalid Khan for collaborations and opportunities." />
-      <h2 className="text-2xl font-bold mb-4">Contact</h2>
-      <p className="text-gray-700 dark:text-gray-300 mb-2">
-        Patna, India · +91 7903883874
-      </p>
-      <p className="text-gray-700 dark:text-gray-300 mb-6">
-        Interested in working together? Fill out the form below or send me an email at{' '}
-        <a
-          href="mailto:khalid.khan.76770@gmail.com"
-          className="text-blue-600 hover:underline"
-        >
-          khalid.khan.76770@gmail.com
-        </a>
-      </p>
-      <form className="grid gap-4 max-w-md" onSubmit={handleSubmit} noValidate>
+      <section className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+        <h2 className="text-2xl font-bold mb-4">Contact</h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-2">
+          Patna, India · +91 7903883874
+        </p>
+        <p className="text-gray-700 dark:text-gray-300 mb-6">
+          Interested in working together? Fill out the form below or send me an email at{' '}
+          <a
+            href="mailto:khalid.khan.76770@gmail.com"
+            className="text-blue-600 hover:underline"
+          >
+            khalid.khan.76770@gmail.com
+          </a>
+        </p>
+        <form className="grid gap-4 max-w-md" onSubmit={handleSubmit} noValidate>
         <div className="hidden">
           <label htmlFor="nickname">Nickname</label>
           <input id="nickname" name="nickname" value={form.nickname} onChange={handleChange} tabIndex="-1" autoComplete="off" />
@@ -101,14 +102,15 @@ export default function Contact() {
         <button className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700" type="submit">
           Send
         </button>
-      </form>
-      <p className="mt-4" aria-live="polite">
-        {status && (
-          <span className={status.type === "success" ? "text-green-600" : "text-red-600"}>
-            {status.message}
-          </span>
-        )}
-      </p>
+        </form>
+        <p className="mt-4" aria-live="polite">
+          {status && (
+            <span className={status.type === "success" ? "text-green-600" : "text-red-600"}>
+              {status.message}
+            </span>
+          )}
+        </p>
+      </section>
     </Layout>
   );
 }

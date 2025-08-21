@@ -84,51 +84,6 @@ export default function Home() {
             </svg>
           </a>
         </div>
-        <div className="mt-8">
-          <button
-            type="button"
-            className="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#demoModal"
-          >
-            Launch Demo Modal
-          </button>
-        </div>
-        <div
-          className="modal fade"
-          id="demoModal"
-          tabIndex="-1"
-          aria-labelledby="demoModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="demoModalLabel">
-                  Welcome
-                </h5>
-                <button
-                  type="button"
-                  className="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div className="modal-body">
-                This is a sample Bootstrap modal.
-              </div>
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
     </Layout>
   );
