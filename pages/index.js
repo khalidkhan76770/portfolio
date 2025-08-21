@@ -1,11 +1,12 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
+import Head from "next/head";
 import { useEffect, useState } from "react";
 
 const titles = [
-  "Full-Stack Developer",
-  "UI/UX Enthusiast",
-  "Open Source Contributor",
+  "Front-End Developer",
+  "Systems Engineer",
+  "Inventory Controller",
 ];
 
 export default function Home() {
@@ -20,13 +21,21 @@ export default function Home() {
 
   return (
     <Layout>
+      <Head>
+        <title>Khalid Khan | Portfolio</title>
+        <meta
+          name="description"
+          content="Portfolio of Khalid Khan - front-end developer, systems engineer, and inventory controller based in India."
+        />
+      </Head>
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 to-purple-100 dark:from-gray-700 dark:to-gray-800 rounded-xl shadow">
         <img
-          src="https://via.placeholder.com/128"
-          alt="Profile"
+          src="https://avatars.githubusercontent.com/u/106541625?v=4"
+          alt="Khalid Khan"
           className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
         />
         <h2 className="text-4xl font-extrabold mb-3">Hello, I'm Khalid Khan</h2>
+        <p className="mb-2 text-gray-700 dark:text-gray-300">Based in Patna, India</p>
         <p className="mb-8 text-gray-700 dark:text-gray-300 text-lg">
           I'm a <span className="text-blue-600">{titles[current]}</span>
         </p>
@@ -62,7 +71,7 @@ export default function Home() {
             </svg>
           </a>
           <a
-            href="https://www.linkedin.com/in/khalid"
+            href="https://www.linkedin.com/in/khalidkhan76770"
             aria-label="LinkedIn"
             className="hover:text-blue-600"
             target="_blank"
