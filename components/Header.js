@@ -14,7 +14,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 bg-white shadow z-10">
+    <header className="sticky top-0 backdrop-blur bg-white/80 shadow z-10">
       <div className="max-w-4xl mx-auto flex justify-between items-center px-6 py-4">
         <Link href="/" className="flex items-center space-x-2">
           <img
@@ -22,7 +22,9 @@ export default function Header() {
             alt="Logo"
             className="h-8 w-8 rounded-full"
           />
-          <span className="text-xl font-bold">Khalid Khan</span>
+          <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Khalid Khan
+          </span>
         </Link>
 
         <button
@@ -47,14 +49,14 @@ export default function Header() {
         </button>
 
         <nav
-          className={`${open ? "block" : "hidden"} md:block space-y-2 md:space-y-0 md:space-x-4 md:flex`}
+          className={`${open ? "block" : "hidden"} md:block space-y-2 md:space-y-0 md:space-x-6 md:flex`}
         >
           {navItems.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`block md:inline px-2 py-1 rounded hover:text-blue-600 ${
-                router.pathname === href ? "text-blue-600 font-semibold" : ""
+              className={`block md:inline px-2 py-1 rounded transition-colors hover:text-blue-600 ${
+                router.pathname === href ? "text-blue-600 font-semibold" : "text-gray-700"
               }`}
             >
               {label}
