@@ -1,11 +1,11 @@
 export default function Footer() {
   return (
-    <footer className="py-6 text-center text-sm text-gray-500 border-t mt-8">
+    <footer className="py-6 text-center text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700 mt-8">
       <div className="flex justify-center gap-4 mb-2">
         <a
           href="https://github.com/khalidkhan76770"
           aria-label="GitHub"
-          className="hover:text-black"
+          className="hover:text-black dark:hover:text-white"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -35,8 +35,8 @@ export default function Footer() {
           </svg>
         </a>
       </div>
-      <p>© {new Date().getFullYear()} Khalid Khan</p>
-      <a href="#" className="block mt-2 text-blue-600">
+      <p className="dark:text-gray-400">© {new Date().getFullYear()} Khalid Khan</p>
+      <a href="#" className="block mt-2 text-blue-600 hover:underline">
         Back to top
       </a>
     </footer>

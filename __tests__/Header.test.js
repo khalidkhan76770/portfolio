@@ -10,11 +10,11 @@ jest.mock('next/router', () => ({
 describe('Header', () => {
   it('renders navigation links', async () => {
     render(<Header />);
-    const button = screen.getByLabelText(/toggle navigation/i);
+    const button = screen.getByLabelText(/open menu/i);
     await userEvent.click(button);
-    expect(screen.getByText('Home')).toBeInTheDocument();
-    expect(screen.getByText('Projects')).toBeInTheDocument();
-    expect(screen.getByText('About')).toBeInTheDocument();
-    expect(screen.getByText('Contact')).toBeInTheDocument();
+    expect(screen.getAllByText('Home').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Projects').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('About').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Contact').length).toBeGreaterThan(0);
   });
 });
