@@ -63,7 +63,7 @@ export default function Projects() {
   return (
     <Layout>
       <SEO title="Projects | Khalid Khan" description="A selection of web development projects by Khalid Khan." />
-      <section className="space-y-6">
+      <section className="space-y-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
         <h2 className="text-3xl font-bold">Projects</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((p) => (
