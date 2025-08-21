@@ -3,14 +3,20 @@ import ProjectCard from "../components/ProjectCard";
 
 const sampleProjects = [
   {
-    title: "Project One",
-    description: "Brief description of project one.",
-    image: "/images/project1.jpg",
+    title: "Portfolio Website",
+    description: "Personal portfolio built with Next.js and Tailwind CSS.",
+    image: "https://via.placeholder.com/600x400?text=Project+1",
+    link: "https://khalidkhan76770.github.io/portfolio/",
+    github: "https://github.com/khalidkhan76770/portfolio",
+    tech: ["Next.js", "Tailwind"],
   },
   {
-    title: "Project Two",
-    description: "Brief description of project two.",
-    image: "/images/project2.jpg",
+    title: "Weather App",
+    description: "Displays weather information for locations using OpenWeatherMap API.",
+    image: "https://via.placeholder.com/600x400?text=Project+2",
+    link: "https://example.com/weather",
+    github: "https://github.com/khalidkhan76770/weather-app",
+    tech: ["React", "API"],
   },
 ];
 
