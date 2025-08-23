@@ -34,11 +34,16 @@ export default function Contact() {
   };
 
   return (
-     <section id="contact" className="section section-pad">
+    <section id="contact" className="section section-pad">
       <h2 className="text-2xl md:text-3xl font-semibold">Contact</h2>
-      <div className="mt-6 card p-6 w-full max-w-md md:mx-auto">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-2">
-          <input name="name" placeholder="Full name" className="border rounded-xl p-3" required />
+      <div className="mt-6 card p-6">
+        <form onSubmit={handleSubmit} className="grid gap-4 sm:grid-cols-2">
+          <input
+            name="name"
+            placeholder="Full name"
+            className="border rounded-xl p-3"
+            required
+          />
           <input
             type="email"
             name="email"
@@ -49,17 +54,20 @@ export default function Contact() {
           <input
             name="subject"
             placeholder="Subject"
-            className="border rounded-xl p-3"
+            className="border rounded-xl p-3 sm:col-span-2"
             required
           />
           <textarea
             name="message"
             placeholder="Message"
             rows={4}
-            className="border rounded-xl p-3"
+            className="border rounded-xl p-3 sm:col-span-2"
             required
           />
-          <button className="btn-primary self-end" type="submit">
+          <button
+            className="btn-primary justify-self-end sm:col-span-2"
+            type="submit"
+          >
             Send
           </button>
         </form>
