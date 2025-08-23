@@ -7,6 +7,6 @@ describe('Footer', () => {
     render(<Footer />);
     const link = screen.getByText('Email');
     expect(link).toHaveAttribute('href', `mailto:${meta.email}`);
-    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).not.toHaveAttribute('target');
   });
 });
