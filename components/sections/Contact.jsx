@@ -1,19 +1,31 @@
 "use client";
 
-import { meta } from "@/lib/data";
+import { useState } from "react";
 
 export default function Contact() {
-  const handleSubmit = (e) => {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus("");
     const formData = new FormData(e.target);
-    const subject = encodeURIComponent(formData.get("subject") || "");
-    const body = encodeURIComponent(
-      `Name: ${formData.get("name")}\nEmail: ${formData.get("email")}\n\n${formData.get("message")}`
-    );
-    window.open(
-      `https://mail.google.com/mail/?view=cm&fs=1&to=${meta.email}&su=${subject}&body=${body}`
-    );
-    e.target.reset();
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        setStatus("Your mail has been sent successfully.");
+        e.target.reset();
+      } else {
+        setStatus("Failed to send message. Please try again later.");
+      }
+    } catch {
+      setStatus("Failed to send message. Please try again later.");
+    }
   };
 
   return (
@@ -30,6 +42,7 @@ export default function Contact() {
             <button className="btn-primary" type="submit">Send</button>
           </div>
         </form>
+        {status && <p className="mt-4 text-sm text-green-600">{status}</p>}
       </div>
     </section>
   );
