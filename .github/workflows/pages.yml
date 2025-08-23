@@ -24,7 +24,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          
+          # removed cache: npm because you have no lockfile
 
       - name: Install
         run: npm install
@@ -33,7 +33,7 @@ jobs:
         run: npm run build
 
       - name: Export static site
-  run: npx next export --outdir out
+        run: npx next export --outdir out
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
