@@ -10,7 +10,10 @@ export default function Contact() {
     const body = encodeURIComponent(
       `Name: ${formData.get("name")}\nEmail: ${formData.get("email")}\n\n${formData.get("message")}`
     );
-    window.location.href = `mailto:${meta.email}?subject=${subject}&body=${body}`;
+    window.open(
+      `https://mail.google.com/mail/?view=cm&fs=1&to=${meta.email}&su=${subject}&body=${body}`
+    );
+    e.target.reset();
   };
 
   return (

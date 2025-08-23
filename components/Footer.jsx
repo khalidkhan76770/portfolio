@@ -8,7 +8,14 @@ export default function Footer() {
         <div className="flex gap-4">
           <a href="https://github.com/khalidkhan76770" target="_blank" rel="noreferrer" className="hover:text-blue-600">GitHub</a>
           <a href="https://www.linkedin.com/in/khalidkhan76770" target="_blank" rel="noreferrer" className="hover:text-blue-600">LinkedIn</a>
-          <a href={`mailto:${meta.email}`} className="hover:text-blue-600">Email</a>
+          <a
+            href={`mailto:${meta.email}`}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-blue-600"
+          >
+            Email
+          </a>
         </div>
       </div>
     </footer>
