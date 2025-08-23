@@ -1,5 +1,5 @@
-import Image from "next/image";
 import ProjectCard from "../ProjectCard";
+import { projects } from "@/lib/data";
 
 export default function Projects() {
   return (
