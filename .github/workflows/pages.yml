@@ -24,17 +24,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          # removed cache: npm because you have no lockfile
+          # no cache here since you have no lockfile
 
       - name: Install
         run: npm install
 
-      - name: Build
+      - name: Build (static export via output:'export')
         run: npm run build
 
-      - name: Export static site
-        run: npx next export --outdir out
-
+      # Next.js writes the static site to ./out automatically
+      # when next.config.js has output: 'export'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
