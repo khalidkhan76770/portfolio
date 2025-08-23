@@ -1,3 +1,5 @@
+"use client";
+
 import { meta } from "@/lib/data";
 
 export default function Contact() {
