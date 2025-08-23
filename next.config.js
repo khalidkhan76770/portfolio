@@ -6,14 +6,13 @@ const nextConfig = {
   assetPrefix: '/portfolio/',
   trailingSlash: true,
   images: {
-    unoptimized: true,
+    unoptimized: true, // required for static export
     remotePatterns: [
       { protocol: 'https', hostname: 'cdn.pixabay.com' },
       { protocol: 'https', hostname: 'img.freepik.com' },
       { protocol: 'https', hostname: 'images.unsplash.com' }
     ]
   },
-  // Optional: avoid ESLint blocking CI builds
   eslint: { ignoreDuringBuilds: true }
 };
 module.exports = nextConfig;
