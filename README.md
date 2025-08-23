@@ -2,6 +2,13 @@
 
 This is a Next.js portfolio site. It uses Tailwind CSS for styling and includes a simple API route for contact form submissions.
 
+## Contact form
+The contact form posts to `/api/send-email` and uses Nodemailer for delivery. Set the following environment variables so the API can send mail:
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_USER`
+- `SMTP_PASS`
+
 ## Scripts
 - `npm run dev` – start development server
 - `npm run build` – build for production
