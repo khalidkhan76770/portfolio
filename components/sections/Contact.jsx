@@ -9,15 +9,20 @@ export default function Contact() {
     e.preventDefault();
     setStatus("");
     const formData = new FormData(e.target);
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const res = await fetch("/api/send-email", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(data),
       });
-      if (res.ok) {
+      const result = await res.json();
+      if (res.ok && result.success) {
         setStatus("Your mail has been sent successfully.");
         e.target.reset();
       } else {
