@@ -11,8 +11,6 @@ export default function Footer() {
             <a href="https://www.linkedin.com/in/khalidkhan76770" target="_blank" rel="noreferrer" className="hover:text-blue-600">LinkedIn</a>
             <a
               href={`mailto:${meta.email}`}
-              target="_blank"
-              rel="noreferrer"
               className="hover:text-blue-600"
             >
               Email

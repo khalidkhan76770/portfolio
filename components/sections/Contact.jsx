@@ -35,7 +35,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section section-pad mb-24">
-      <div className="card p-6 max-w-md mx-auto">
+      <div className="card p-6 max-w-md">
         <h2 className="text-2xl md:text-3xl font-semibold">Contact</h2>
         <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-2">
           <input name="name" placeholder="Full name" className="border rounded-xl p-3" required />
