@@ -1,13 +1,10 @@
 # Portfolio
 
-This is a Next.js portfolio site. It uses Tailwind CSS for styling and includes a simple API route for contact form submissions.
+This is a Next.js portfolio site. It uses Tailwind CSS for styling and submits contact forms through [Web3Forms](https://web3forms.com).
 
 ## Contact form
-The contact form posts to `/api/send-email` and uses Nodemailer for delivery. Set the following environment variables so the API can send mail:
-- `SMTP_HOST`
-- `SMTP_PORT`
-- `SMTP_USER`
-- `SMTP_PASS`
+Both the contact section and footer form post directly to the Web3Forms API. Set the following environment variable so submissions are accepted:
+- `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`
 
 ## Scripts
 - `npm run dev` – start development server
