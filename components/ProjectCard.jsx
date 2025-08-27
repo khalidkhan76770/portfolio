@@ -53,7 +53,7 @@ export default function ProjectCard({ title, summary, image, tech = [], demo, co
               Live Demo
             </a>
           ) : (
-            <span className="text-sm text-gray-600">Live Demo upon request</span>
+            <span className="text-sm text-gray-600">Live Demo Upon Request</span>
           )}
           {code ? (
             <a
@@ -65,7 +65,7 @@ export default function ProjectCard({ title, summary, image, tech = [], demo, co
               Live Code
             </a>
           ) : (
-            <span className="text-sm text-gray-600">Live Code upon request</span>
+            <span className="text-sm text-gray-600">Live Code Upon Request</span>
           )}
         </div>
       </div>
