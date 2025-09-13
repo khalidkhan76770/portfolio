@@ -5,7 +5,7 @@ import { meta } from '../lib/data';
 describe('Footer', () => {
   it('has working email link', () => {
     render(<Footer />);
-    const link = screen.getByText('Email');
+    const link = screen.getByRole('link', { name: /email/i });
     expect(link).toHaveAttribute('href', `mailto:${meta.email}`);
     expect(link).not.toHaveAttribute('target');
   });
