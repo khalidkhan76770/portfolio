@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="section py-10">
         <div className="mt-4 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-4">
           <p>© {new Date().getFullYear()} Khalid Khan</p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <a
               href={meta.github}
               target="_blank"
@@ -58,6 +58,23 @@ export default function Footer() {
                 <rect x="2" y="4" width="20" height="16" rx="2" ry="2" />
                 <path d="M2 4l10 8 10-8" />
               </svg>
+            </a>
+            <a
+              href={meta.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-green-600 flex items-center gap-2"
+            >
+              <span className="sr-only">WhatsApp</span>
+              <svg
+                className="w-6 h-6 fill-current"
+                role="img"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M380.9 97.1C339 55.2 283.2 32 224.1 32 102.2 32 8 125.3 8 248c0 43.6 11.5 86.1 33.3 123.1L0 480l112.2-40.9c34 18.7 72.1 28.5 111.8 28.5h.1c122 0 216.3-93.3 216.3-216 0-53.9-21-104.6-59.5-142.5zM224.1 390.7h-.1c-33.2 0-65.7-8.9-94-25.7l-6.7-4-66.5 24.2 23.3-68.5-4.4-7c-20-31.8-30.6-68.4-30.6-106.1 0-101.2 82.3-183.5 183.7-183.5 49 0 95.1 19.1 129.8 53.8 34.6 34.6 53.7 80.6 53.7 129.6 0 101.3-82.3 183.6-183.6 183.6zm101.6-138.7c-5.5-2.8-32.5-16-37.5-17.8-5-.9-8.6-1.3-12.2 3.5-3.5 4.9-14 17.8-17.2 21.5-3.2 3.7-6.3 4.2-11.8 1.4-32.2-16.1-53.5-28.8-74.8-65.4-5.7-9.8 5.7-9.1 16.1-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.2-29.5-16.7-40.4-4.4-10.6-8.9-9.1-12.2-9.2-3.2-.1-6.9-.1-10.5-.1-3.7 0-9.7 1.4-14.8 6.9-5 5.5-19.5 19-19.5 46.3s20 53.7 22.8 57.5c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.5 13.9 10.7-1.6 32.5-13.3 37.1-26.2 4.6-12.9 4.6-24 3.2-26.2-1.3-2.3-5-3.7-10.5-6.5z" />
+              </svg>
+              <span>{meta.phone}</span>
             </a>
           </div>
         </div>

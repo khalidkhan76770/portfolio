@@ -9,4 +9,12 @@ describe('Footer', () => {
     expect(link).toHaveAttribute('href', `mailto:${meta.email}`);
     expect(link).not.toHaveAttribute('target');
   });
+
+  it('has working WhatsApp link with number', () => {
+    render(<Footer />);
+    const link = screen.getByRole('link', { name: /whatsapp/i });
+    expect(link).toHaveAttribute('href', meta.whatsapp);
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveTextContent(meta.phone);
+  });
 });
