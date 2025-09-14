@@ -3,7 +3,7 @@ import { meta } from "@/lib/data";
 export default function Hero() {
   return (
     <section
-      className="section-pad bg-[url('/portfolio/placeholder-2.jpg')] bg-cover bg-center"
+      className="section-pad bg-[url('/portfolio/placeholder-3.jpg')] bg-cover bg-center"
     >
       <div className="section">
         <p className="chip mb-4 w-fit">Open to Web Dev roles</p>
