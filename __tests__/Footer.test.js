@@ -10,11 +10,11 @@ describe('Footer', () => {
     expect(link).not.toHaveAttribute('target');
   });
 
-  it('has working WhatsApp link with number', () => {
+  it('has working phone link without number text', () => {
     render(<Footer />);
-    const link = screen.getByRole('link', { name: /whatsapp/i });
-    expect(link).toHaveAttribute('href', meta.whatsapp);
-    expect(link).toHaveAttribute('target', '_blank');
-    expect(link).toHaveTextContent(meta.phone);
+    const link = screen.getByRole('link', { name: /phone/i });
+    expect(link).toHaveAttribute('href', `tel:${meta.phone.replace(/\s/g, '')}`);
+    expect(link).not.toHaveAttribute('target');
+    expect(link).not.toHaveTextContent(meta.phone);
   });
 });
