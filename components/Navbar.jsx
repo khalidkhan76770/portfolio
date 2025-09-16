@@ -19,20 +19,12 @@ export default function Navbar() {
         <Link href="/" className="font-semibold">Khalid</Link>
 
         <nav className="hidden md:flex items-center gap-3">
-          {links.map((link, index) => {
-            const baseClasses =
-              "inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600";
-            const variantClasses =
-              index === links.length - 1
-                ? "bg-blue-600 text-white hover:bg-blue-700"
-                : "text-gray-700 hover:text-blue-600 hover:bg-blue-50";
+          {links.map(link => {
+            const linkClasses =
+              "inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-blue-50 hover:text-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600";
 
             return (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`${baseClasses} ${variantClasses}`}
-              >
+              <a key={link.href} href={link.href} className={linkClasses}>
                 {link.label}
               </a>
             );
@@ -41,12 +33,29 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="md:hidden inline-flex items-center justify-center rounded-xl border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+          className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl border border-gray-200 bg-white p-2 text-gray-700 shadow-sm transition hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-nav"
+          aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           onClick={() => setMobileMenuOpen(prev => !prev)}
         >
-          {mobileMenuOpen ? "Close" : "Menu"}
+          <span aria-hidden className="relative flex h-full w-full flex-col items-center justify-center gap-1.5">
+            <span
+              className={`block h-0.5 w-full rounded-full bg-gray-900 transition-transform duration-200 ease-in-out ${
+                mobileMenuOpen ? "translate-y-1.5 rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`block h-0.5 w-full rounded-full bg-gray-900 transition-opacity duration-200 ease-in-out ${
+                mobileMenuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`block h-0.5 w-full rounded-full bg-gray-900 transition-transform duration-200 ease-in-out ${
+                mobileMenuOpen ? "-translate-y-1.5 -rotate-45" : ""
+              }`}
+            />
+          </span>
         </button>
       </div>
 
